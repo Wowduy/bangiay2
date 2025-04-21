@@ -1,21 +1,19 @@
-using C_CuoiKi;
+using quanlibangiay2;
 
-namespace quanlibangiay2
+namespace C_CuoiKi
 {
     internal static class Program
     {
+        /// <summary>
+        ///  The main entry point for the application.
+        /// </summary>
         [STAThread]
         static void Main()
         {
+            // To customize application configuration such as set high DPI settings or default font,
+            // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-
-            // Initialize window manager
-            var windowManager = new WindowManager();
-
-            // Pass window manager to login form
-            var loginForm = new FormLogin(windowManager);
-
-            Application.Run(loginForm);
+            Application.Run(new FormLogin());
         }
     }
 }
